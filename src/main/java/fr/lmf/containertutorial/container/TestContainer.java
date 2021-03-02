@@ -14,12 +14,7 @@ import net.minecraft.util.IWorldPosCallable;
 
 public class TestContainer extends Container {
 
-    private final IInventory inputInventory = new Inventory(2) {
-        public void markDirty() {
-            super.markDirty();
-            TestContainer.this.onCraftMatrixChanged(this);
-        }
-    };
+    private final IInventory inputInventory = new Inventory(2);
     private final IWorldPosCallable worldPosCallable;
 
     public TestContainer(int windowIdIn, PlayerInventory playerInventoryIn) {
