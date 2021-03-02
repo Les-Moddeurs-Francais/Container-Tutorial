@@ -24,6 +24,7 @@ public class TestContainer extends Container {
     public TestContainer(int windowIdIn, PlayerInventory playerInventoryIn, final IWorldPosCallable worldPosCallableIn) {
         super(ContainerInit.TEST_CONTAINER.get(), windowIdIn);
         this.worldPosCallable = worldPosCallableIn;
+        //29 29 correspond a la position de l'un des slots se trouvant sur la texture de l'interface
         this.addSlot(new Slot(this.inputInventory, 0, 29, 29) {
             /**
              * Check if the stack is allowed to be placed in this slot, used for armor slots as well as furnace fuel.
@@ -32,6 +33,7 @@ public class TestContainer extends Container {
                 return stack.getItem() instanceof BlockItem;
             }
         });
+        //69 29 correspond a la position du deuxième slot se trouvant sur la texture de l'interface
         this.addSlot(new Slot(this.inputInventory, 1, 69, 29) {
             /**
              * Check if the stack is allowed to be placed in this slot, used for armor slots as well as furnace fuel.
