@@ -87,17 +87,17 @@ public class TestContainer extends Container {
             ItemStack itemstack3 = this.inputInventory.getStackInSlot(1);
             if (index != 0 && index != 1) {
                 if (!itemstack2.isEmpty() && !itemstack3.isEmpty()) {
-                    if (index >= 3 && index < 30) {
+                    if (index >= 2 && index < 29) {
                         if (!this.mergeItemStack(itemstack1, 30, 39, false)) {
                             return ItemStack.EMPTY;
                         }
-                    } else if (index >= 30 && index < 39 && !this.mergeItemStack(itemstack1, 3, 30, false)) {
+                    } else if (index >= 29 && index < 38 && !this.mergeItemStack(itemstack1, 3, 30, false)) {
                         return ItemStack.EMPTY;
                     }
-                } else if (!this.mergeItemStack(itemstack1, 0, 2, false)) {
+                } else if (!this.mergeItemStack(itemstack1, 0, 1, false)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (!this.mergeItemStack(itemstack1, 3, 39, false)) {
+            } else if (!this.mergeItemStack(itemstack1, 2, 38, false)) {
                 return ItemStack.EMPTY;
             }
 
