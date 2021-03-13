@@ -60,8 +60,8 @@ public class TestContainer extends Container {
      */
     public void onContainerClosed(PlayerEntity playerIn) {
         super.onContainerClosed(playerIn);
-        this.worldPosCallable.consume((p_217009_2_, p_217009_3_) -> {
-            this.clearContainer(playerIn, p_217009_2_, this.inputInventory);
+        this.worldPosCallable.consume((world, pos) -> {
+            this.clearContainer(playerIn, world, this.inputInventory);
         });
     }
 
